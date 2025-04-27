@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Trade+Winds&display=swap');
+
+/*
+Titles- font-family: "Trade Winds", system-ui;
+Body Copy- font-family: "Noto Kufi Arabic", sans-serif;
+*/
+
+/*
+Colors:
+Light Green- #6ca14e 
+Dark Green- #41602f
+Cream- #dfdaaf
+Dark Cream- #c7c3a5
+Gray- #8e8e8e
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: "Trade Winds", system-ui;
+    font-size: 40px;
+}
+
+html{
+    background: #dfdaaf;
+}
+
+header{
+    border-bottom: 10px solid #6ca14e;
+}
+
+body{
+    margin: 30px;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 15px;
+    padding: 20px;
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+main section img{
+    max-width: 50%;
+}
+
+footer{
+    border-top: 10px solid #6ca14e;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-size: small;
+    font-style: italic;
+}
+
+
+/* Navigation */
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    padding: 3px;
+    gap: 30px;
+}
+
+nav a{
+    background: #41602f;
+    color:#ffffff;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Grid */
+.container{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "nav body"
+    "footer footer" ;
+    grid-template-columns: 1fr 3fr;
+}
+
+.container > div.title{
+    grid-area: title;
+}
+
+.container > div.nav{
+    grid-area: nav;
+}
+
+.container > div.body{
+    grid-area: body;
+}
+
+.container > div.footer{
+    grid-area: footer;
+}
